@@ -5,7 +5,7 @@ Discover and learn how your music performed week to week
 As a user, I will be able to search songs that are becoming top 100 for the year 2024. I can directly search for the week or I can filter by month. I can obtain more information about the music by clicking on the disc and getting the information that is displayed when the disc flips over. I can also click on the music and add it to my favorite tab. This will allow me to quickly find the music I like.
 
 An example of your db.json or what API you are going to use
-db.json fromGithub/billboard charts 
+db.json [fromGithub/billboard charts ](https://raw.githubusercontent.com/mhollingshead/billboard-hot-100/main/all.json)
 
 What 3 unique event listeners you will use
 a. Submit - form for user it search for dates
