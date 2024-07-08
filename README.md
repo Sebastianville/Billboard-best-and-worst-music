@@ -1,3 +1,4 @@
+
 # View Billboard’s Top 100 songs of 2024
 Discover and learn how your music performed week to week
 
@@ -37,5 +38,7 @@ e. Maybe a Karaoke app? User can select songs and add to a Karaoke playlist?
 ![wireframe 1](https://github.com/Sebastianville/Billboard-s-Top-100-songs-of-2024/assets/157150764/19ae3b78-e7f5-4866-b7d4-9b6c1726edbc)
 
 ![wire frame 2](https://github.com/Sebastianville/Billboard-s-Top-100-songs-of-2024/assets/157150764/4b835417-4f7a-48c8-a893-2c0d4df93a8d)
+
+![Kanban 07-08-24](https://github.com/Sebastianville/Billboard-s-Top-100-songs-of-2024/assets/157150764/a69938dd-5ebe-4640-81e2-565f8414c76a)
 
 
