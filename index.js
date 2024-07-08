@@ -4,3 +4,8 @@ function fetchMusic(){
     .then(data => console.log(data));
 }
 fetchMusic();
+
+
+const h2 = document.createElement("h2");
+h2.textContent = "Billboard";
+document.querySelector("body").appendChild(h2);
