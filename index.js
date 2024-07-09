@@ -25,6 +25,3 @@ fetchMusic();
 
 //Get the element that we need to attach it to "webpage"
 
-const h2 = document.createElement("h2");
-h2.textContent = "Billboard";
-document.querySelector("body").appendChild(h2);
