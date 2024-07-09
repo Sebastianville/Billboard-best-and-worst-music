@@ -1,20 +1,20 @@
 //This is where notes are going to be add 
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="stylesheet" href="style.css" />
-    <title>Billboard Top 100 2024</title>
-  </head>
-  <body>
-    <h1>Welcome to the results of 2024</h1>
+// <!DOCTYPE html>
+// <html lang="en">
+//   <head>
+//     <link rel="stylesheet" href="style.css" />
+//     <title>Billboard Top 100 2024</title>
+//   </head>
+//   <body>
+//     <h1>Welcome to the results of 2024</h1>
     
     
     
-    <script defer src="index.js"></script>
+//     <script defer src="index.js"></script>
     
-  </body>
-</html>
+//   </body>
+// </html>
 
 
 
