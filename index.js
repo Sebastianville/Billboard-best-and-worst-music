@@ -17,36 +17,51 @@ function fetchMusic(){
             throw "We weren't able to obtain JSON"
         };
         })
-     .then((data) => {
-        data.forEach((music) => {
-        renderMusicDetail(music)
-        renderMusicImg(music);
+     .then((array) => {console.log(array)
+        function top5songsOfJuly(obj) {
+            return obj.date === "2024-07-06";
+          }
+          array.find(top5songsOfJuly).data.slice(0,5)
+          
+          
+
+        array.find(top5songsOfJuly).data.slice(0,5).forEach((top5songsOfJuly) => {console.log(top5songsOfJuly)
+        renderMusicDetail(top5songsOfJuly)
      });
 });
 };
 
 fetchMusic();
 
+// function top5songsOfJuly(obj) {
+//     return obj.date === "2024-07-06";
+//   }
+//   array.find(top5songsOfJuly).data.slice(0,5)
+
 //We are going to need to creat an img, p, div, header 
 
 function renderMusicImg (music) {
-    let songDiv = document.getElementByID("songBar");
+    let songDiv = document.getElementById("songBar");
     songDiv.append(imgDisc);
 }
 
 
-function renderMusicDetail(music){
+
+function renderMusicDetail(top5songsOfJuly){
     let songDetail = document.getElementById("songDetails");
-    let disc = document.getElementById("discs");
     let artist = document.getElementById("artists");
     let thisWeek = document.getElementById("thisWeek");
     let lastWeek = document.getElementById("lastWeek");
     let peakPosition = document.getElementById("peakPosition");
-   
-    songDetail.textContent = music.song;
-    thisWeek.textContent = music["this_week"];
-    lastWeek.textContent = music["last_week"];
-    artist.textContent = music.artist;
-    peakPosition.textContent = music["peak_position"];
-    disc.src = imgDisc;
+    // console.log(music.data[0].song)
+
+    songDetail.textContent = top5songsOfJuly.song;
+    // console.log(songDetail);
+    thisWeek.textContent = top5songsOfJuly.this_week;
+    lastWeek.textContent = top5songsOfJuly.last_week;
+    artist.textContent = top5songsOfJuly.artist;
+    peakPosition.textContent = top5songsOfJuly.peak_position;
+
+
+    songDetail.append(artist,thisWeek,lastWeek,peakPosition)
 };
