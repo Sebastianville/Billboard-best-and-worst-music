@@ -52,7 +52,7 @@ Three stretch goals
 a. Add more years to database
 
 b. Add songs to Spotify playlist
-
+git rebase --skip
 c. Link YouTube videos 
 
 d. Add image of Artist or/Album to each “CD” 
