@@ -45,7 +45,7 @@ function top5songsOfJuly(obj) {
  array.find(top5songsOfJuly).data.slice(0,5)
 };
 
-//We are going to need to creat an img, p, div, header 
+
 
 function renderMusicImg (music) {
     let songDetails = document.getElementById("songDetails");
@@ -65,8 +65,15 @@ function renderMusicDetail(top5songsOfJuly){
     artist.textContent = `Artist: ${top5songsOfJuly.artist}`;
     thisWeek.textContent = `Ranking This Week: ${top5songsOfJuly.this_week}`;
     lastWeek.textContent = `Ranking Last Week: ${top5songsOfJuly.last_week}`;
-    peakPosition.textContent = `Peak Position: ${top5songsOfJuly.peak_position}`;
+    peakPosition.textContent = "Click me- Find out the Peak Position"
 
     songDetails.append(song, artist, thisWeek, lastWeek);
 
+    peakPosition.addEventListener("click", event => {
+       if (event.target.textContent === "Click me- Find out the Peak Position"){ 
+         event.target.textContent = `Peak Position: ${top5songsOfJuly.peak_position}`
+       } else {
+        event.target.textContent = "Click me- Find out the Peak Position"
+       }
+    });
 };
