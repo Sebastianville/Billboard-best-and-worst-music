@@ -5,21 +5,34 @@
     <title>Billboard Top 100 2024</title>
   </head>
   <body>
-    <h1 style="text-align:center">Welcome to the results of 2024</h1>
+    <header>
+    <h1 style="text-align:center">Billboard Top 5 Songs of July 2024</h1>
+    <h2 style="text-align:center">Songs of the Summer</h2>
+    </header>
     
-    <h2 style="text-align:center">Music</h2>
-    <input id="searchinput" type="text" placeholder="search Ranking 1-5">
+    <input id="searchinput" type="text" placeholder="Search Ranking 1 - 5">
+    
     <button id="searchButton">Search</button>
 
-        <div  id="songDetails">
-          <img id="discs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/CD_autolev_crop_new.jpg/220px-CD_autolev_crop_new.jpg"> </img>
-          <h2 id="artists">insert Artist here</h2>
-          <h3 id="thisWeek">insert this week here</h3>
-          <h4 id="lastWeek">Insert Last Week here</h4>
-          <h5 id="peakPosition">Insert Peak position here</h5>
-        </div>
+        <div id="songDetails">
+          
+          <img id="disc" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/CD_autolev_crop_new.jpg/220px-CD_autolev_crop_new.jpg"> </img>
+          
+          
+          <h3 id="song">Song Title</h3>
+          <h3 id="artist">Artist</h3>
+          <h4 id="thisWeek">Ranking This Week</h4>
+          <h4 id="lastWeek">Ranking Last Week</h4>
+          
+        
     
       <button id="toggle">Toggle</button>
+      <h4 id="peakPosition">Peak Position</h4>
+      </div>
+
+      <div id="Favorite">Favorite Songs List</div>
+
+      <button id="Add Song">Add Song</button>
         
         
 
