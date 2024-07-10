@@ -58,6 +58,7 @@ function renderMusicDetail(top5songsOfJuly){
     let thisWeek = document.getElementById("thisWeek");
     let lastWeek = document.getElementById("lastWeek");
     let peakPosition = document.getElementById("peakPosition");
+    let toggleBtn = document.getElementById("toggle")
     // console.log(music.data[0].song)
 
     song.textContent = `Song Title: ${top5songsOfJuly.song}`;
@@ -76,4 +77,27 @@ function renderMusicDetail(top5songsOfJuly){
         event.target.textContent = "Click me- Find out the Peak Position"
        }
     });
-};
+    
+  song.addEventListener("mouseover", event => {
+    event.target.textContent = `Song Title: ${top5songsOfJuly.song}`
+  })
+
+song.addEventListener("mouseout", event => {
+    event.target.textContent = "Checkout the hit song"
+})
+
+
+    const toggleDisplay = () =>{ 
+        if (songDetails.style.display === "none") {
+            songDetails.style.display = "block"
+        }else{
+        songDetails.style.display = "none"
+    }
+}
+
+    toggleBtn.addEventListener("click", toggleDisplay)
+
+}
+
+
+
