@@ -4,13 +4,13 @@ imgDisc.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/CD_auto
 imgDisc.style.height = "100px";
 imgDisc.style.width = "100px";
 
-let songDetails = document.getElementById("songDetails");
+let songDetails = document.querySelector("body");
 
-let song = document.getElementById("song");
-let artist = document.getElementById("artist");
-let thisWeek = document.getElementById("thisWeek");
-let lastWeek = document.getElementById("lastWeek");
-let peakPosition = document.getElementById("peakPosition");
+// let song = document.getElementById("song");
+// let artist = document.getElementById("artist");
+// let thisWeek = document.getElementById("thisWeek");
+// let lastWeek = document.getElementById("lastWeek");
+// let peakPosition = document.getElementById("peakPosition");
 function fetchMusic(){
     fetch(url)
         .then(response => {
@@ -22,6 +22,7 @@ function fetchMusic(){
         })
         .then(data => {
             const top5songs = data.find(obj => obj.date === "2024-07-06").data.slice(0, 5);
+            console.log(top5songs)
             top5songs.forEach(song => {
                 renderMusicDetail(song);
             });
@@ -39,28 +40,47 @@ function top5songsOfJuly() {
 };
 
 function renderMusicDetail(song){
-    let newSongDetails = songDetails.cloneNode(true);
-    newSongDetails.style.display = "block";
+   
+    let newSongDetails = document.createElement("div")
+    newSongDetails.id = "songDetails"
 
-    let songElem = newSongDetails.querySelector("#song");
-    let artistElem = newSongDetails.querySelector("#artist");
-    let thisWeekElem = newSongDetails.querySelector("#thisWeek");
-    let lastWeekElem = newSongDetails.querySelector("#lastWeek");
-    let peakPositionElem = newSongDetails.querySelector("#peakPosition");
+    const imgDisc = document.createElement("img");
+    imgDisc.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/CD_autolev_crop_new.jpg/220px-CD_autolev_crop_new.jpg";
+    imgDisc.style.height = "100px";
+    imgDisc.style.width = "100px";
 
-    songElem.textContent = `Song Title: ${song.song}`;
+     
+    // songDetails.cloneNode(true);
+    // newSongDetails.style.display = "block";
+    
+    let songElem = document.createElement("h3");
+    songElem.id = "song";
+
+    let artistElem = document.createElement("h3");
+    artistElem.id = "artist";
+
+    let thisWeekElem = document.createElement("h4");
+    thisWeekElem.id = "thisWeek";
+        
+    let lastWeekElem = document.createElement("h4");
+    lastWeekElem.id ="lastWeek";
+    
+    let peakPositionElem = document.createElement("h4");
+    peakPositionElem.id = "peakPosition"
+
+    songElem.textContent = `Checkout the hit song`;
     artistElem.textContent = `Artist: ${song.artist}`;
     thisWeekElem.textContent = `Ranking This Week: ${song.this_week}`;
     lastWeekElem.textContent = `Ranking Last Week: ${song.last_week}`;
     peakPositionElem.textContent = "Click me- Find out the Peak Position";
 
     
-    songElem.addEventListener("mouseout", event => {
-        event.target.textContent = "Checkout the hit song"
-        })    
-
     songElem.addEventListener("mouseover", event => {
         event.target.textContent = `Song Title: ${song.song}`
+        })    
+
+    songElem.addEventListener("mouseout", event => {
+        event.target.textContent = "Checkout the hit song"
         })
 
     peakPositionElem.addEventListener("click", event => {
@@ -72,8 +92,10 @@ function renderMusicDetail(song){
 
    
 });
+  
+//songDetails.parentNode.insertBefore(newSongDetails, songDetails.nextSibling);
 
-   
+newSongDetails.append(imgDisc, songElem, artistElem, thisWeekElem, lastWeekElem, peakPositionElem);
 
-songDetails.parentNode.insertBefore(newSongDetails, songDetails.nextSibling);
+songDetails.append(newSongDetails);
 }
