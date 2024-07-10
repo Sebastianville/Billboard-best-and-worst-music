@@ -1,4 +1,5 @@
 const url = "https://raw.githubusercontent.com/mhollingshead/billboard-hot-100/main/all.json";
+
 const imgDisc = document.createElement("img");
 imgDisc.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/CD_autolev_crop_new.jpg/220px-CD_autolev_crop_new.jpg";
 imgDisc.style.height = "100px";
@@ -6,11 +7,7 @@ imgDisc.style.width = "100px";
 
 let songDetails = document.querySelector("body");
 
-// let song = document.getElementById("song");
-// let artist = document.getElementById("artist");
-// let thisWeek = document.getElementById("thisWeek");
-// let lastWeek = document.getElementById("lastWeek");
-// let peakPosition = document.getElementById("peakPosition");
+
 function fetchMusic(){
     fetch(url)
         .then(response => {
@@ -49,10 +46,6 @@ function renderMusicDetail(song){
     imgDisc.style.height = "100px";
     imgDisc.style.width = "100px";
 
-     
-    // songDetails.cloneNode(true);
-    // newSongDetails.style.display = "block";
-    
     let songElem = document.createElement("h3");
     songElem.id = "song";
 
@@ -89,13 +82,10 @@ function renderMusicDetail(song){
         } else {
             event.target.textContent = "Click me- Find out the Peak Position";
         }
-
    
 });
   
-//songDetails.parentNode.insertBefore(newSongDetails, songDetails.nextSibling);
+    newSongDetails.append(imgDisc, songElem, artistElem, thisWeekElem, lastWeekElem, peakPositionElem);
 
-newSongDetails.append(imgDisc, songElem, artistElem, thisWeekElem, lastWeekElem, peakPositionElem);
-
-songDetails.append(newSongDetails);
+    songDetails.append(newSongDetails);
 }

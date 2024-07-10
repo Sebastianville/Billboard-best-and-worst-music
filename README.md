@@ -14,7 +14,7 @@ a. Click - user can click on "Click me" option to display info about the Peak Po
 
 b. Mouse over - user can move the cursor onto the "Song Title" element and the title will be displayed
 
-c. Mouse out - event is fired when the user moves the cursor so that it is no longer contained within the "Song Title" 
+c. Mouse out - event is fired when the user moves the cursor so that it is no longer contained within the "Checkout the hit song"
 
 
 How you will be using array iteration?

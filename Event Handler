@@ -8,17 +8,12 @@ b. Mouse over - user can move the cursor onto the "Song Title" element and the t
 
 c. Mouse out - event is fired when the user moves the cursor so that it is no longer contained within the "Song Title" 
 
-
-
-
-
+songElem.addEventListener("mouseover", event => {
+    event.target.textContent = `Song Title: ${song.song}`
+    })    
 
 songElem.addEventListener("mouseout", event => {
     event.target.textContent = "Checkout the hit song"
-    })    
-
-songElem.addEventListener("mouseover", event => {
-    event.target.textContent = `Song Title: ${song.song}`
     })
 
 peakPositionElem.addEventListener("click", event => {
@@ -27,6 +22,8 @@ peakPositionElem.addEventListener("click", event => {
     } else {
         event.target.textContent = "Click me- Find out the Peak Position";
     }
+})
 
 
-});
+
+
