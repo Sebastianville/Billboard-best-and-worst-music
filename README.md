@@ -2,27 +2,27 @@
 Discover and learn how your music performed week to week
 
 # User Stories
-As a user, I will be able to search songs that are top 5 for the July in the year 2024.  I can obtain more information about the music by clicking on the disc and getting the information that is displayed when the disc flips over. I can also click on the music and add it to my favorite tab. This will allow me to quickly find the music I like.
+As a user, I will be able to see the top 5 songs of July 2024 displayed on the page.  I can obtain more information about the music by clicking on the "Click me" option to display the Peak Position of the song. I can also mouse over and mouse out on the "Check out the hit song" option to display the Song Title. 
 
+# Core Deliverables
 An example of your db.json or what API you are going to use
 db.json [fromGithub/billboard charts ](https://raw.githubusercontent.com/mhollingshead/billboard-hot-100/main/all.json)
 
+What 3 unique event listeners you will use:
 
-What 3 unique event listeners you will use
+a. Click - user can click on "Click me" option to display info about the Peak Position of the song on the Billboard Chart
 
-a. Toggle – user can toggle on “CD” have description of song displayed (artist name, date song appeared on BB, peak position)
+b. Mouse over - user can move the cursor onto the "Song Title" element and the title will be displayed
 
-b. Click – user can click on button to add or delete songs to the “Favorite” panel
-
-c. mouse over- the pic to pop out more. 
+c. Mouse out - event is fired when the user moves the cursor so that it is no longer contained within the "Song Title" 
 
 
-How you will be using array iteration
+How you will be using array iteration?
 
 We will use forEach to display song info to the user. 
 
 
-Three stretch goals
+Stretch goals:
 
 a. Add more years to database
 

@@ -1,1 +1,19 @@
 //This is where the function that renders our images or anything will be added here 
+function renderMusicDetail(song){
+    let newSongDetails = songDetails.cloneNode(true);
+    newSongDetails.style.display = "block";
+
+    let songElem = newSongDetails.querySelector("#song");
+    let artistElem = newSongDetails.querySelector("#artist");
+    let thisWeekElem = newSongDetails.querySelector("#thisWeek");
+    let lastWeekElem = newSongDetails.querySelector("#lastWeek");
+    let peakPositionElem = newSongDetails.querySelector("#peakPosition");
+
+    songElem.textContent = `Song Title: ${song.song}`;
+    artistElem.textContent = `Artist: ${song.artist}`;
+    thisWeekElem.textContent = `Ranking This Week: ${song.this_week}`;
+    lastWeekElem.textContent = `Ranking Last Week: ${song.last_week}`;
+    peakPositionElem.textContent = "Click me- Find out the Peak Position";
+
+
+    

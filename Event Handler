@@ -1,13 +1,32 @@
 //This is where the event Handler are going to be located 
 
-//a. Toggle – user can toggle on “CD” have description of song displayed (artist name, date song appeared on BB, peak position)
+What 3 unique event listeners you will use:
+
+a. Click - user can click on "Click me" option to display info about the Peak Position of the song on the Billboard Chart
+
+b. Mouse over - user can move the cursor onto the "Song Title" element and the title will be displayed
+
+c. Mouse out - event is fired when the user moves the cursor so that it is no longer contained within the "Song Title" 
 
 
 
 
-//b. Click – user can click on button to add songs to the “Favorite” panel
 
 
+songElem.addEventListener("mouseout", event => {
+    event.target.textContent = "Checkout the hit song"
+    })    
+
+songElem.addEventListener("mouseover", event => {
+    event.target.textContent = `Song Title: ${song.song}`
+    })
+
+peakPositionElem.addEventListener("click", event => {
+    if (event.target.textContent === "Click me- Find out the Peak Position") {
+        event.target.textContent = `Peak Position: ${song.peak_position}`;
+    } else {
+        event.target.textContent = "Click me- Find out the Peak Position";
+    }
 
 
-//c. mouse over- the pic to pop out more. 
+});
