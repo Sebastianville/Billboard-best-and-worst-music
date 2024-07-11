@@ -40,11 +40,16 @@
 
 // fetchMusic();
 
-
+//renamed function
 // function top5songsOfJuly(obj) {
 //     return obj.date === "2024-07-06";
    
 //  array.find(top5songsOfJuly).data.slice(0,5)
+// };
+
+// function top5songs() {
+//     return obj.date === "2024-07-06";
+//     data.find(top5songs).data.slice(0,5)
 // };
 
 

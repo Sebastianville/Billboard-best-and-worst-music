@@ -31,10 +31,6 @@ function fetchMusic(){
 
 fetchMusic();
 
-function top5songsOfJuly() {
-    return obj.date === "2024-07-06";
-    data.find(top5songsOfJuly).data.slice(0,5)
-};
 
 function renderMusicDetail(song){
    
